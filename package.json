@@ -1,0 +1,17 @@
+{
+  "name": "hello-vitest",
+  "version": "1.0.0",
+  "description": "Getting started with Vitest",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [
+    "vitest"
+  ],
+  "author": "Mark Wiemer",
+  "license": "MIT",
+  "devDependencies": {
+    "vitest": "^0.24.3"
+  }
+}
