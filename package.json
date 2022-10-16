@@ -11,13 +11,24 @@
   "author": "Mark Wiemer",
   "main": "index.js",
   "scripts": {
-    "fixup": "sort-package-json",
+    "fixup": "npm run packagejson_fix && npm run quality_fix",
     "fixup//": "echo Fix auto-fixable problems with the project",
+    "packagejson": "npm run packagejson_inner -- --check",
+    "packagejson//": "echo Check whether package.json is sorted or sort it",
+    "packagejson_fix": "npm run packagejson_inner",
+    "packagejson_inner": "sort-package-json",
+    "quality": "npm run quality_inner -- --max-warnings=0 && echo No quality problems",
+    "quality//": "echo Checks code quality for common mistakes",
+    "quality_fix": "npm run quality_inner -- --fix",
+    "quality_inner": "eslint src --ext ts",
     "test": "vitest",
-    "validate": "sort-package-json --check && npm run test -- run",
+    "validate": "npm run packagejson && npm run quality && npm run test -- run",
     "validate//": "echo Ensure everything with the project is working correctly"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "eslint": "^8.25.0",
     "prettier": "2.7.1",
     "sort-package-json": "^2.0.0",
     "vitest": "^0.24.3"
