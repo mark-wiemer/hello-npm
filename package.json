@@ -24,20 +24,33 @@
         "packagejson//": "echo Check whether package.json is sorted or sort it",
         "packagejson_fix": "npm run packagejson_inner",
         "packagejson_inner": "sort-package-json",
+        "prepare": "husky install",
         "quality": "npm run quality_inner -- --max-warnings=0 && echo No quality problems",
         "quality//": "echo Checks code quality for common mistakes",
         "quality_fix": "npm run quality_inner -- --fix",
         "quality_inner": "eslint src --ext ts",
         "test": "vitest",
-        "validate": "npm run packagejson && npm run format && npm run quality && npm run test -- run",
+        "validate": "tsc && npm run quality && npm run test -- run && npm run format && npm run packagejson",
         "validate//": "echo Ensure everything with the project is working correctly"
     },
+    "lint-staged": {
+        "*": "prettier --check",
+        "src/*": [
+            "npm run quality_inner",
+            "tsc --noEmit"
+        ],
+        "package.json": "npm run packagejson"
+    },
+    "dependencies": {},
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.40.0",
         "@typescript-eslint/parser": "^5.40.0",
         "eslint": "^8.25.0",
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.3",
         "prettier": "2.7.1",
         "sort-package-json": "^2.0.0",
+        "typescript": "~4.8.4",
         "vitest": "^0.24.3"
     }
 }
