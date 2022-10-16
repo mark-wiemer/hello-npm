@@ -1,13 +1,13 @@
 {
-  "name": "hello-vitest",
+  "name": "hello-npm",
   "version": "1.0.0",
-  "description": "Getting started with Vitest",
+  "description": "A template npm package",
   "main": "index.js",
   "scripts": {
     "test": "vitest"
   },
   "keywords": [
-    "vitest"
+    "vitest", "npm", "template"
   ],
   "author": "Mark Wiemer",
   "license": "MIT",
