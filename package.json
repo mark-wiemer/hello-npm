@@ -2,17 +2,24 @@
   "name": "hello-npm",
   "version": "1.0.0",
   "description": "A template npm package",
+  "keywords": [
+    "vitest",
+    "npm",
+    "template"
+  ],
+  "license": "MIT",
+  "author": "Mark Wiemer",
   "main": "index.js",
   "scripts": {
-    "test": "vitest"
+    "fixup": "sort-package-json",
+    "fixup//": "echo Fix auto-fixable problems with the project",
+    "test": "vitest",
+    "validate": "sort-package-json --check && npm run test -- run",
+    "validate//": "echo Ensure everything with the project is working correctly"
   },
-  "keywords": [
-    "vitest", "npm", "template"
-  ],
-  "author": "Mark Wiemer",
-  "license": "MIT",
   "devDependencies": {
     "prettier": "2.7.1",
+    "sort-package-json": "^2.0.0",
     "vitest": "^0.24.3"
   }
 }
