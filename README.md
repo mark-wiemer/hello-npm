@@ -4,9 +4,9 @@ A template project to easily get started building a well-maintained npm package.
 
 ## Goals
 
-- Easy setup
-- Automatically format, lint, test, build, and deploy code
-- Document popular project management techniques
+-   Easy setup
+-   Automatically format, lint, test, build, and deploy code
+-   Document popular project management techniques
 
 ## Creating a new project
 

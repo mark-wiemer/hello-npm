@@ -1,11 +1,10 @@
 export const add = (a: number, b: number) => a + b;
 
 function foo(bar) {
-  console.log("potato");
-  if (bar === 2) {
-    // use double-equals to test ES Lint
-    console.log("wowow");
-  }
+    if (bar === 2) {
+        // use double-equals to test ESLint
+        console.log('wowow');
+    }
 }
 
-foo(1);
+foo(1); // if the function isn't called, ESLint throws an error
