@@ -13,6 +13,7 @@ A template project to easily get started building a well-maintained npm package.
 ### Machine dependencies
 
 1. NodeJS and npm
+1. Visual Studio Code
 
 ### Project setup
 
