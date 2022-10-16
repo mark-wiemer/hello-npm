@@ -12,6 +12,7 @@
   "author": "Mark Wiemer",
   "license": "MIT",
   "devDependencies": {
+    "prettier": "2.7.1",
     "vitest": "^0.24.3"
   }
 }
