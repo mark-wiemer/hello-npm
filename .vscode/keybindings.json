@@ -1,0 +1,8 @@
+// Recommended keybindings for NPM projects
+// F1 > Preferences: Open Keyboard Shortcuts (JSON)
+[
+    {
+        "key": "ctrl+k ctrl+shift+r",
+        "command": "workbench.action.reloadWindow"
+    }
+]
