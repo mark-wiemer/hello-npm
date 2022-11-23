@@ -19,9 +19,9 @@ A template project to easily get started building a well-maintained npm package.
 
 1. Clone this project into a new repo
 1. `npm i`
-1. Install the recommended extensions
+1. Install the recommended VS Code extensions
 1. You're done!
 
 Optional:
 
-1. Enable [`keybindings.json](./.vscode/keybindings.json) following the instructions in that file
+1. Enable [keybindings.json](./.vscode/keybindings.json) following the instructions in that file
